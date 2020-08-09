@@ -1,5 +1,6 @@
 const axios = require("axios");
 
+//get request json data using axios
 const getJson = (callback, err) => {
   axios
     .get("https://jsonplaceholder.typicode.com/posts")
@@ -11,6 +12,7 @@ const getJson = (callback, err) => {
     });
 };
 
+//expose getPost controller calls getJson function
 exports.getPosts = (req, res) => {
   getJson(
     (data) => {
